@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS로 나만의 캐릭터 만들기</title>
+    <style>
+      .container{ margin-left: 80px; }
+
+      .left-ear, .right-ear,
+      .face, .left-eye, .right-eye, .arm{
+        border: solid 5px black;
+      }
+
+      .head, .left-ear-line, .right-ear-line, 
+      .left-eye-iris, .right-eye-iris, 
+      .mouth, .left-dimple, .right-dimple, .arm{
+        position: relative;
+      }
+
+      .head{
+        width: 350px;
+        top: 30px;
+      }
+
+      .ears{
+        width: 250px;
+        margin: 0 auto;
+        left: 70px;
+      }
+
+      .left-ear, .right-ear{
+        background: linear-gradient(#589742, #284921);
+      }
+
+      .face, .mouth, .arm{ background-color: #172C45; }
+
+      .left-ear{
+        display: inline-block;
+        margin: 0 auto;
+        height: 70px;
+        width: 55px;
+        border-radius: 0 55%;
+        transform: rotate(345deg);
+        margin-right: 100px;
+      }
+
+      .right-ear{
+        display: inline-block;
+        height: 70px;
+        width: 55px;
+        border-radius: 55% 0;
+        transform: rotate(20deg);
+      }
+
+      .left-ear-line, .right-ear-line{
+        height: 40px;
+        width: 50px;
+      }
+
+      .left-ear-line{
+        bottom: -30px;
+        border-right: solid 5px black;
+        border-top-right-radius: 50px;
+      }
+
+      .right-ear-line{
+        bottom: -30px;
+        border-left: solid 5px black;
+        border-top-left-radius: 50px;
+      }
+
+      .face{
+        width: 335px;
+        height: 350px;
+        border-radius: 130px 130px 0 0;
+      }
+
+      .eyes{
+        width: 220px;
+        margin: 50px auto 0 auto;
+      }
+
+      .left-eye, .right-eye, .left-eye-iris, .right-eye-iris{
+        display: inline-block;
+        width: 80px;
+        height:70px;
+      }
+
+      .left-eye{
+        margin-right: 30px;
+      }
+
+      .left-eye, .right-eye{
+        background: #fff;
+      }
+
+      .left-eye, .left-eye-iris{
+        border-top-left-radius: 80%;
+        border-top-right-radius: 60%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 70%;
+      }
+
+      .right-eye, .right-eye-iris{
+        border-top-left-radius: 60%;
+        border-top-right-radius: 80%;
+        border-bottom-left-radius: 70%;
+        border-bottom-right-radius: 50%;
+      }
+
+      .left-eye-iris, .right-eye-iris{
+        transform: scale(0.9);
+        background-color: black;
+        bottom: -4px;
+      }
+
+      .shiny-effect{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;;
+        background: #fff;
+        left: 15px;
+        top: 5px;
+      }
+
+      .mouth{
+        width: 40px;
+        height: 30px;
+        border-bottom: solid 5px black;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        left: 145px;
+        padding: 0;
+      }
+
+      .left-dimple{
+        border-left: solid 4px black;
+        width: 50px;
+        height: 15px;
+        border-radius: 50px;
+        top: 18px;
+        left: -3px;
+      }
+
+      .right-dimple{
+        border-right: solid 4px black;
+        width: 50px;
+        height: 15px;
+        border-radius: 50px;
+        top: 3px;
+        left: -12px;
+      }
+
+      .arm{
+        width: 400px;
+        height: 190px;
+        margin-left: 50px;
+        top: -200px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        z-index: -10;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="head">
+      <div class="ears">
+        <div class="left-ear">
+          <div class="left-ear-line"></div>
+        </div>
+        <div class="right-ear">
+          <div class="right-ear-line"></div>
+        </div>
+      </div>
+    </div>
+    <div class="face">
+      <div class="eyes">
+        <div class="left-eye">
+          <div class="left-eye-iris">
+            <div class="shiny-effect"></div>
+          </div>
+        </div>
+        <div class="right-eye">
+          <div class="right-eye-iris">
+            <div class="shiny-effect"></div>
+          </div>
+        </div>
+      </div>
+      <div class="mouth">
+        <div class="left-dimple"></div>
+      <div class="right-dimple"></div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="arm"></div>
+    
+</body>
+</html>
