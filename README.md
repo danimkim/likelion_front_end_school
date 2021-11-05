@@ -1,6 +1,6 @@
 # likelion_front_end_school
 
-- https://dahhnym.github.io/front_end_school_html/
+- https://dahhnym.github.io/likelion_front_end_school/
 <br><br>
 
 ### 과제
