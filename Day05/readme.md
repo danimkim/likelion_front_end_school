@@ -38,10 +38,10 @@ margin-top, margin-bottom 을 줄 수 없고 height, width를 줄 수 없다.
 - normal flow에 있는 요소들은 `float`된 요소와 `position:absolute` 값이 설정된 요소들을 인식하지 못한다
 - normal flow에 있는 요소들을 인식하면서 특정 요소를 이동시키고 싶다면 `position:relative`를 쓰면 된다
 
-#### 컨테이너 역할을 하는 부모 요소가 자식 요소가 float일 때 생기는 문제점 해결 방법
+#### 자식 요소가 float일 때 컨테이너 역할을 하는 부모 요소에게 생기는 문제점 해결 방법
 1. clear 속성주기 : 요소의 앞에 있는 형제요소의 `float`을 해제시켜준다
 2. 부모 요소에 `overflow:hidden` 주기
-3. clear-fix 방법 - 가상 요소 클래스 `::after` 사용하기
+3. clear-fix 방법 : 가상 요소 클래스 `::after` 사용하기
 
 ### 5.`img` 태그의 alt 속성
 ```
