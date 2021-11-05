@@ -1,4 +1,4 @@
-# front_end_school_html
+# likelion_front_end_school
 
 - https://dahhnym.github.io/front_end_school_html/
 <br><br>
