@@ -54,6 +54,10 @@ margin-top, margin-bottom 을 줄 수 없고 height, width를 줄 수 없다.
 
 
 
+<hr>
+### 예제 결과 확인하기
+https://dahhnym.github.io/likelion_front_end_school/Day05/063_div_inline_block_%EC%86%8D%EC%84%B1_%EB%B6%80%EC%97%B0%EC%84%A4%EB%AA%85.html
+
 
 
   
