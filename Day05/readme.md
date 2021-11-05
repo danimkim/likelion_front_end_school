@@ -33,7 +33,6 @@ margin-top, margin-bottom 을 줄 수 없고 height, width를 줄 수 없다.
 |:--:|:--:| 
 | float 설정하기 전 |float을 주었을때|
 - block 요소는 기본적으로 뷰포트의 가로폭 전체 넓이를 차지하는데 float 값을 주면 해당 요소에 해당하는 공간만큼만 차지하게 된다
-이미지 첨부
 - `float`을 따로 설정하지 않은 상태에서 html 요소들은 normal flow에 있다
 - 요소에 `float`을 설정하면 부모 요소가 해당 요소를 인식하지 못한다
 - normal flow에 있는 요소들은 `float`된 요소와 `position:absolute` 값이 설정된 요소들을 인식하지 못한다
