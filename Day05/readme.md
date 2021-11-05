@@ -51,12 +51,11 @@ margin-top, margin-bottom 을 줄 수 없고 height, width를 줄 수 없다.
 이미지 설명이 필요 없는 경우라도 alt 속성을 없애지 않고 그냥 빈값으로 두어야한다.
 스크린 리더가 html 문서를 읽을 때 img 태그에 alt 속성이 있으면 그 속성값을 읽지만 아예 없으면 src 속성값(이미지파일의 주소)을 읽어버린다.
 이를 방지하기 위해 이미지 설명이 필요 없더라도 alt 속성을 꼭 적어주어야한다.
-
-
-
+<br><br>
 <hr>
-### 예제 결과 확인하기
-https://dahhnym.github.io/likelion_front_end_school/Day05/063_div_inline_block_%EC%86%8D%EC%84%B1_%EB%B6%80%EC%97%B0%EC%84%A4%EB%AA%85.html
+
+#### 예제 결과 확인하기
+- [063_div_inline_block_속성_부연설명.html](https://dahhnym.github.io/likelion_front_end_school/Day05/063_div_inline_block_%EC%86%8D%EC%84%B1_%EB%B6%80%EC%97%B0%EC%84%A4%EB%AA%85.html)
 
 
 
