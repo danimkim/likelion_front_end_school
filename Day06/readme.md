@@ -103,7 +103,7 @@ li{
 </div>
 ```
 
-| <img src="https://user-images.githubusercontent.com/74545780/140786860-3b5e1e48-f8aa-4af5-ba48-0d930c69248c.png"> | 
+| <img src="https://user-images.githubusercontent.com/74545780/140790833-cd29b22c-8d3a-4102-bf2a-853c8dddfa49.png"> | 
 |:--:| 
 | 모든 flex-item에 flex-grow: 1 값을 주었을 때 | 
 
