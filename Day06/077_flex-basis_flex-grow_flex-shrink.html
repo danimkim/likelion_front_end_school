@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basis, flex-grow, flex-shrink</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+      .container{
+        display: flex;
+        /* flex-direction: column; */
+      }
+      .item{
+        width: 100px;
+        height: 100px;
+        flex-basis: 100px;
+        background-color: tomato;
+        border: solid 1px black;
+        flex-grow: 1;
+      }
+      .second{
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Lorem, ipsum dolor.</div>
+    <div class="item second">Lorem ipsum dolor sit amet.</div>
+    <div class="item">lorem ipsum</div>
+  </div>
+    
+</body>
+</html>
