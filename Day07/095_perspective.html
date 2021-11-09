@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perspective</title>
+    <style>
+      div{
+        width: 200px;
+        height: 200px;
+      }
+      .원본 {
+          border: 1px solid black;
+          margin: 80px;
+          /* 화면과 화면을 보고 있는 사용자 사이의 거리라고 생각하면 좀 쉽다*/
+          perspective: 200px;
+          font-size: 50px;
+      }
+
+      .회전패널1 {
+          background: salmon;
+          transform: rotate(45deg);
+        }
+        
+      .회전패널2{
+        background: salmon;
+        transform: rotateX(45deg);
+      }
+
+      .회전패널3{
+        background: salmon;
+        transform: rotateY(45deg);
+      }
+    </style>
+</head>
+<body>
+    <div class="원본">
+        <div class="회전패널1">rotate</div>
+      </div>
+    <div class="원본">
+      <div class="회전패널2">rotateX</div>
+    </div>
+    <div class="원본">
+      <div class="회전패널3">rotateY</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transition Test</title>
+  <style>
+    body{
+      position: relative;
+    }
+    .border, .box{
+      position: absolute;
+      top: 200px;
+      left: 200px;
+			width:100px;
+			height:100px;
+    }
+    .border{ border: solid 1px black; }
+
+		.box{
+      width:100px;
+			height:100px;
+			background:dodgerblue;
+      border: solid 1px dodgerblue;
+			transition:all 1s;
+			transform-origin:left top;
+      /* transform-origin: 60px 70px; */
+      /* x축으로 60px, y축으로 70px 으로 이동한 지점 */
+		}
+		.box:hover{
+			transform:rotate(360deg);
+		}
+
+  </style>
+</head>
+<body>
+  <div class="border"></div>
+  <div class="box">hello world</div>
+</body>
+</html>
