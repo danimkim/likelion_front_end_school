@@ -19,9 +19,6 @@
   - transition-timing-function
   - transition-delay
 
-#### 실습 예제
-
-
 ### 3. transform
 - 요소에 회전, 크기 조절, 기울이기, 이동 효과 등을 부여할 수 있다
 - `transform`의 대표적인 속성은 다음과 같다
@@ -72,8 +69,6 @@ div{
 }
 ```
 
-
-
 ### 5. perspective
 원근감을 표현하는 속성으로 화면과 그 화면을 보는 사용자 사이의 거리라고 생각하면 이해하기 쉽다 값이 작을수록 더 극적인 효과가 난다
 | ![이미지 7](https://user-images.githubusercontent.com/74545780/140975233-b93c69d8-8825-4306-b0ac-afa45aa6b84e.png) | ![이미지 8](https://user-images.githubusercontent.com/74545780/140975236-492caaff-7ffb-49c3-a08d-ab1f6c9e4aaa.png) |  
@@ -81,4 +76,9 @@ div{
 | `perspective: 200px` | `perspective: 100px` |
 
 
+
+#### 실습 예제 결과 확인하기
+▪️ [scale, skew, rotate transition-delay](https://dahhnym.github.io/likelion_front_end_school/Day07.088_transition.html)<br>
+▪️ [animation-iteration-count](https://dahhnym.github.io/likelion_front_end_school/Day07/091_animation_iteration_count.html)<br>
+▪️ [animation-direction](https://dahhnym.github.io/likelion_front_end_school/Day07/092_animation_direction.html)
 
