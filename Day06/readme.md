@@ -4,7 +4,7 @@
 ### 1. align-items, align-content
 - 요소를 `cross-axis` 기준으로 이동시킨다
 - `align-items`는 `flex-container`에 주는 값이다
-- `align-items: stretch`가 기본값으로 컨테이너의 자식 요소의 `height` 값이 설정되어 있지 않을때 cross-axis 방향으로 컨테이너 영역 만큼 자식 요소의 영역을 쭉 늘려준다<br>
+- `align-items: stretch`가 기본값으로 컨테이너의 자식 요소의 `height` 값이 설정되어 있지 않을때 `cross-axis` 방향으로 컨테이너 영역 만큼 자식 요소의 영역을 쭉 늘려준다<br>
 
 | <img src="https://user-images.githubusercontent.com/74545780/140778243-2704cf60-2ed4-4fd5-ae5f-008c484feb15.png" height="500"> | 
 |:--:| 
