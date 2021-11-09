@@ -75,10 +75,10 @@ div{
 |:--:|:--:|
 | `perspective: 200px` | `perspective: 100px` |
 
+<br><br>
 
-
-#### 실습 예제 결과 확인하기
-▪️ [scale, skew, rotate transition-delay](https://dahhnym.github.io/likelion_front_end_school/Day07.088_transition.html)<br>
+### transform, transition, animation 동작 확인해보기
+▪️ [scale, skew, rotate transition-delay](https://dahhnym.github.io/likelion_front_end_school/Day07/088_transition.html)<br>
 ▪️ [animation-iteration-count](https://dahhnym.github.io/likelion_front_end_school/Day07/091_animation_iteration_count.html)<br>
 ▪️ [animation-direction](https://dahhnym.github.io/likelion_front_end_school/Day07/092_animation_direction.html)
 
