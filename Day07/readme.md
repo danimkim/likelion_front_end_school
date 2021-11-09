@@ -45,18 +45,43 @@ div {
 
 | ![Animation2](https://user-images.githubusercontent.com/74545780/140973337-7806f617-dc28-497c-be95-9f64ff0f761c.gif) | ![Animation](https://user-images.githubusercontent.com/74545780/140973370-b636a6fb-d25a-455a-b4f2-ab99de5437e3.gif) |  
 |:--:|:--:|
-| transform-origin:left-top | transform-origin: 60px 70px |
+| `transform-origin:left-top` | `transform-origin: 60px 70px` |
 
-
-### 4. perspective
-
+### 4. animation
+- `@keyframes` 속성을 이용하여 요소에 애니메이션 효과를 주는 CSS 속성으로 아래의 속성들의 단축 속성이다
+  - animation-name
+  - animation-duration
+  - animation-timing-function
+  - animation-delay
+  - animation-iteration-count
+  - animation-direction
+  - animation-fill-mode
+  - animation-play-state
+- `animation-name`을 정의하고 이를 요소에서 호출하는 방식으로 사용한다
 ```css
-div {
-  perspective: 800px;
+/* 키프레임 이름 == 애니메이션 이름 */
+@keyframes wiggle {
+  0% {
+		styles;
+	}
+	100% {
+		styles;
+	}
+}
+
+div{
+	/* 애니메이션 이름 */
+  animation-name: wiggle;
 }
 ```
-원근감을 표현하는 속성으로 화면과 화면을 보는 사용자와의 거리라고 생각할 수 있다 값이 작을수록 더 극적인 효과가 난다
+
+
+
+### 5. perspective
+원근감을 표현하는 속성으로 화면과 그 화면을 보는 사용자 사이의 거리라고 생각하면 이해하기 쉽다 값이 작을수록 더 극적인 효과가 난다
 | ![이미지 7](https://user-images.githubusercontent.com/74545780/140975233-b93c69d8-8825-4306-b0ac-afa45aa6b84e.png) | ![이미지 8](https://user-images.githubusercontent.com/74545780/140975236-492caaff-7ffb-49c3-a08d-ab1f6c9e4aaa.png) |  
 |:--:|:--:|
-| perspective: 200px | perspective: 100px |
+| `perspective: 200px` | `perspective: 100px` |
+
+
 
