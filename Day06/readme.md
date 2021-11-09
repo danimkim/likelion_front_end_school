@@ -18,7 +18,7 @@
 - 컨테이너 너비가 
 
 #### flex-container에 `flex-wrap: wrap` 값을 주었을 때 align-items와 align-content
-- `align-items`는 flex-items가 컨테이너 너비보다 커서 다음 행으로 넘어가는 경우, 요소들 간의 줄 을 유지하면서 cross-axis 축으로 이동시킨다
+- `align-items`는 flex-items가 컨테이너 너비보다 커서 다음 행으로 넘어가는 경우, 요소들 간의 줄간격을 유지하면서 cross-axis 축으로 이동시킨다
 
 ```css
 .container {
