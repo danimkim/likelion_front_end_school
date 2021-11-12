@@ -1,0 +1,29 @@
+body { font-family: 'Spoqa Han Sans Neo', 'sans-serif' }
+
+#app{
+  width: 520px;
+  height: 712px;
+  border: solid 1px black;
+}
+
+a {
+  text-decoration: none;
+}
+
+header{
+  border: solid 1px red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span{
+  display: block;
+}
+h1 {
+  font-size: 16px;
+  height: 60px;
+}
+
+
+
