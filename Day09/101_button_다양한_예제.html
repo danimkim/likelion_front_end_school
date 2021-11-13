@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button 정리</title>
+    <style>
+      div{
+        color: darkcyan;
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 50px;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        background-color: antiquewhite;
+        border: solid 2px darkcyan;
+        border-radius: 15px;
+        transition: all 1s;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* transform 자주 쓰는 속성 : translate, translateX, translateY, rotate, skew, scale*/
+
+      .c1:hover{
+        transform: translateX(100px);
+        transition-timing-function: ease;
+        /* 살짝 가속도가 있음 */
+      }
+      
+      /* ease-in, ease-out, ease-in-out은 잘 사용하지 않는다*/
+      .c2:hover{
+        transform: translateX(100px);
+        transition-timing-function: linear;
+        /* 등속으로 움직임 */
+      }
+      .c3:hover{
+        background-color: lightpink;
+      }
+      .c4:hover{
+        background-color: lightpink;
+        color: palevioletred;
+      }
+      .c5:hover{
+        transform: scale(1.2);
+        background-color: lightpink;
+      }
+      .c6:hover{
+        width: 800px;
+        height: 100px;
+      }
+      .c7:hover{
+        letter-spacing: 15px;
+      }
+      .c8:hover{
+        letter-spacing: 2px;
+      }
+      .c9:hover{
+        line-height: 50px;
+        opacity: .3;
+      }
+      .c10:hover{
+        border: solid 10px khaki;
+      }
+      .c11:hover{
+        transform: rotate(20deg);
+      }
+      .c12:hover{
+        transform: rotate(20deg);
+        transform-origin: top;
+      }
+      .c13:hover{
+        transform: rotate(20deg);
+        transform-origin: left;
+      }
+      .c14:hover{
+        transform: rotate(20deg);
+        transform-origin: right;
+      }
+      .c15:hover{
+        transform: rotate(20deg);
+        transform-origin: bottom;
+      }
+
+      /* 가상요소를 사용하여 애니메이션 효과 주기*/
+      .c16::before{
+        content: '';
+        position: absolute;
+        background-color: cadetblue;
+        width: 200px;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-300px);
+        transition: all 1s;
+      }
+      .c16:hover::before{
+        content: '';
+        position: absolute;
+        background-color: cadetblue;
+        transform: translateX(0);
+      }
+      .c17::before {
+        content: '';
+        position: absolute;
+        background-color: cadetblue;
+        width: 200px;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-300px);
+        transition: all 1s;
+      }
+      
+      .c17:hover::before {
+        transform: translateX(0);
+      }
+
+      .c17::after {
+        content: '';
+        position: absolute;
+        background-color: cadetblue;
+        width: 200px;
+        height: 5px;
+        top: 0;
+        right: 0;
+        transform: translateX(300px);
+        transition: all 1s;
+      }
+
+      .c17:hover::after{
+        transform: translateX(0)
+      }
+      .c18::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 200px;
+            height: 10px;
+            left: 0;
+            bottom: 0;
+            transform: translateX(-300px);
+            transition: all 1s;
+        }
+
+        .c18:hover::before {
+            transform: translateX(0);
+        }
+
+        .c18::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 200px;
+            height: 10px;
+            right: 0;
+            top: 0;
+            transform: translateX(300px);
+            transition: all 1s;
+        }
+
+        .c18:hover::after {
+            transform: translateX(0);
+        }
+      .c19::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: whitesmoke;
+            transition: all .5s;
+            transform: rotateX(90deg);
+        }
+
+        .c19:hover::before {
+            transform: rotateX(0);
+            z-index: -1;
+        }
+
+        .c19::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: whitesmoke;
+            transition: all .5s;
+            transform: rotateY(90deg);
+        }
+        
+        .c19:hover::after {
+            transform: rotateY(0);
+            z-index: -1;
+        }
+
+        .c19:hover {
+            color: tomato;
+            z-index: 1;
+        }
+      .c20::after{
+        content:'a';
+      }
+      .c20::after::after{
+        content:'b';
+      }
+      .c20::after::after::after{
+        content:'c';
+      }
+
+      .c21::before{
+        position: absolute;
+        content: 'hello there';
+        color: white;
+        background-color: tomato;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        transition: all .5s;
+      }
+      .c21:hover::before{
+        transform: translateY(0);
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="c1">ease</div>
+    <div class="c2">linear</div>
+    <div class="c3">bg-color</div>
+    <div class="c4">bg-color, f-color</div>
+    <div class="c5">scale</div>
+    <div class="c6">size</div>
+    <div class="c7">글자간격</div>
+    <div class="c8">letter-spacing</div>
+    <div class="c9">line-height<br>opacity</div>
+    <div class="c10">border</div>
+    <div class="c11">rotate</div>
+    <div class="c12">rotate top</div>
+    <div class="c13">rotate left</div>
+    <div class="c14">rotate right</div>
+    <div class="c15">rotate bottom</div>
+    <div class="c16">밑줄</div>
+    <div class="c17">위아래줄</div>
+    <div class="c18"></div>
+    <div class="c19">가상요소</div>
+    <div class="c20">hello</div>
+    <div class="c21">hover me</div>
+</body>
+</html>

@@ -1,84 +1,144 @@
-## 2021-11-09 TIL
-
-### 1. svg
-- XML 코드 기반으로 만들어진 확장 가능한 2차원 벡터 그래픽(Scalable Vector Graphics)
-- HTML 태그의 집합으로 이루어져 있어 CSS 및 JS로 컨트롤 가능
-- 주로 단순한 아이콘, 로고, 도형 등을 구현할 때 사용
-
-#### 장점
-확대를 해도 이미지가 깨지지 않고 이미지 크기를 키워도 용량이 늘어나지 않는다
-#### 단점
-복잡한 이미지일 수록 파일 사이즈가 커진다. 따라서 단순한 모양일수록 효율이 좋다
+## 2021-11-08 TIL
 
 
-### 2. transition
-- 요소가 어떠한 한 상태에서 다른 상태로 변할 때 즉, CSS 속성값이 변할 때 그 변화가 일정 시간에 걸쳐 일어나도록 해준다
-- `transition`은 다음 네 가지 속성의 단축 속성이다
-  - transition-property
-  - transition-duration
-  - transition-timing-function
-  - transition-delay
+### 1. align-items, align-content
+- 요소를 `cross-axis` 기준으로 이동시킨다
+- `align-items`는 `flex-container`에 주는 값이다
+- `align-items: stretch`가 기본값으로 컨테이너의 자식 요소의 `height` 값이 설정되어 있지 않을때 `cross-axis` 방향으로 컨테이너 영역 만큼 자식 요소의 영역을 쭉 늘려준다<br>
 
-### 3. transform
-- 요소에 회전, 크기 조절, 기울이기, 이동 효과 등을 부여할 수 있다
-- `transform`의 대표적인 속성은 다음과 같다
-  - scale
-  - rotate
-  - translate
-  - skew
-  - origin
+| <img src="https://user-images.githubusercontent.com/74545780/140778243-2704cf60-2ed4-4fd5-ae5f-008c484feb15.png" height="500"> | 
+|:--:| 
+| align-items: stretch |
 
-#### transform-origin
-- transform되는 object의 기준점을 변경할 때 사용된다
+### 2. align-self
+- 부모 요소의 align-items 속성을 덮어씌워서 특정 요소에 개별적으로 align-items 속성을 부여한다
+
+### 3. flex-wrap
+- `flex-item` 요소들을 감싸주는 역할을 하는 속성으로 강제로 한줄에 배치시키거나 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현하게 해준다
+- 컨테이너 너비가 
+
+#### flex-container에 `flex-wrap: wrap` 값을 주었을 때 align-items와 align-content
+- `align-items`는 flex-items가 컨테이너 너비보다 커서 다음 행으로 넘어가는 경우, 요소들 간의 줄간격을 유지하면서 cross-axis 축으로 이동시킨다
+
 ```css
-div {
-      transform-origin: 60px 70px;
-                     /* x축 | y축 */
+.container {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  align-items: center;
+}
+li{
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+  border: solid 1px black;
 }
 ```
+```html
+<body>
+    <ul class="container">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+    </ul>
+</body>
+```
+| <img src="https://user-images.githubusercontent.com/74545780/140784166-a9cac84f-4b4a-4ed0-a0e2-1135b934eef3.png" height="500"> | <img src="https://user-images.githubusercontent.com/74545780/140780908-890efd7a-fd1a-456b-9c0f-2ed5014dfd87.png" height="500"> | <img src="https://user-images.githubusercontent.com/74545780/140784176-e89b069d-49ea-481f-a4f5-2cab2d76f41d.png" height="500"> | 
+|:--:|:--:|:--:|
+| align-items: flex-start | align-items: center | align-items: flex-end |
 
-| ![Animation2](https://user-images.githubusercontent.com/74545780/140973337-7806f617-dc28-497c-be95-9f64ff0f761c.gif) | ![Animation](https://user-images.githubusercontent.com/74545780/140973370-b636a6fb-d25a-455a-b4f2-ab99de5437e3.gif) |  
-|:--:|:--:|
-| `transform-origin:left-top` | `transform-origin: 60px 70px` |
-
-### 4. animation
-- `@keyframes` 속성을 이용하여 요소에 애니메이션 효과를 주는 CSS 속성으로 아래의 속성들의 단축 속성이다
-  - animation-name
-  - animation-duration
-  - animation-timing-function
-  - animation-delay
-  - animation-iteration-count
-  - animation-direction
-  - animation-fill-mode
-  - animation-play-state
-- `animation-name`을 정의하고 이를 요소에서 호출하는 방식으로 사용한다
+- `align-content`는 요소들간의 줄간격 없이 이동시킨다
 ```css
-/* 키프레임 이름 == 애니메이션 이름 */
-@keyframes wiggle {
-  0% {
-		styles;
-	}
-	100% {
-		styles;
-	}
+.container {
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  align-content: center;
 }
-
-div{
-	/* 애니메이션 이름 */
-  animation-name: wiggle;
+li{
+  width: 100px;
+  height: 100px;
+  background-color: salmon;
+  border: solid 1px black;
 }
 ```
+| <img src="https://user-images.githubusercontent.com/74545780/140781972-6a29118d-24c6-4ae9-b7da-03034c73a254.png" height="500"> | 
+|:--:| 
+| align-content: center |
 
-### 5. perspective
-원근감을 표현하는 속성으로 화면과 그 화면을 보는 사용자 사이의 거리라고 생각하면 이해하기 쉽다 값이 작을수록 더 극적인 효과가 난다
-| ![이미지 7](https://user-images.githubusercontent.com/74545780/140975233-b93c69d8-8825-4306-b0ac-afa45aa6b84e.png) | ![이미지 8](https://user-images.githubusercontent.com/74545780/140975236-492caaff-7ffb-49c3-a08d-ab1f6c9e4aaa.png) |  
-|:--:|:--:|
-| `perspective: 200px` | `perspective: 100px` |
 
-<br><br>
+### 4. flex-basis
+- flex-basis는 자식요소에 사용한다.
+- main axis 방향에 요소의 넓이값을 특정한다 main axis가 row라면 x축 방향으로 넓이가 적용되고 column이라면 y축방향로 넓이가 적용된다
+- flex-basis가 적용되어 있으면 width, height 값이 무시된다
+- flex-basis 보다 크려면 flex-grow, 작게 하려면 flex-shrink
+- 음수값은 없고 기본값이 1이다 0을 사용할 경우 컨테이너의 크기가 줄어도 값은 고정된다
+```css
+.container{
+  display: flex;
+}
+.item{
+  width: 100px;
+  height: 100px;
+  flex-basis: 100px;
+  background-color: tomato;
+  border: solid 1px black;
+  flex-grow: 1;
+}
+```
+```html
+<div class="container">
+  <div class="item">Lorem, ipsum dolor.</div>
+  <div class="item second">Lorem ipsum dolor sit amet.</div>
+  <div class="item">lorem ipsum</div>
+</div>
+```
 
-### transform, transition, animation 동작 확인해보기
-▪️ [scale, skew, rotate transition-delay](https://dahhnym.github.io/likelion_front_end_school/Day07/088_transition.html)<br>
-▪️ [animation-iteration-count](https://dahhnym.github.io/likelion_front_end_school/Day07/091_animation_iteration_count.html)<br>
-▪️ [animation-direction](https://dahhnym.github.io/likelion_front_end_school/Day07/092_animation_direction.html)
+| <img src="https://user-images.githubusercontent.com/74545780/140790833-cd29b22c-8d3a-4102-bf2a-853c8dddfa49.png"> | 
+|:--:| 
+| 모든 flex-item에 flex-grow: 1 값을 주었을 때 | 
+
+```css
+.item{
+  width: 100px;
+  height: 100px;
+  flex-basis: 100px;
+  background-color: tomato;
+  border: solid 1px black;
+  flex-grow: 1;
+}
+.second{
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+```
+| <img src="https://user-images.githubusercontent.com/74545780/140788910-9472ab71-203e-4256-8660-e457494ad039.png"> | 
+|:--:| 
+| .second 클래스를 가진 flex-item에만 flex-grow:0 flex-shrink:0 을 주었을 때 |
+
+### 5. grid
+- grid는 container 영역을 꽉 채우려는 특성이 있다
+
+
+#### grid 속성 선언 방식(1)
+```css
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+```
+#### grid 속성 선언 방식(2)
+```css
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+```
 

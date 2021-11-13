@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse</title>
+    <style>
+      @keyframes move{
+        0%{
+          transform: translate(0, 0);
+        }
+        15%{
+          transform: translate(300px, 0);
+        }
+        30%{
+          transform: translate(300px, 300px);
+        }
+        45%{
+          transform: translate(0, 300px);
+        }
+        70%{
+          transform: translate(300px, 300px);
+        }
+        85%{
+          transform: translate(300px, 0);
+        }
+        100%{
+          transform: translate(0, 0);
+        }
+      }
+
+      div{
+        width: 100px;
+        height: 100px;
+        background-color: slateblue;
+        color: white;
+        text-align: center;
+        vertical-align: center;
+        animation: move 7s infinite;
+      }
+
+      /* 선생님 코드 */
+      /* @keyframes 돌아와돌아와돌아와 {
+        0% {
+          transform: translate(0, 0);
+        }
+        
+        33.3% {
+          transform: translate(500px, 0);
+        }
+        
+        66.6% {
+          transform: translate(500px, 500px);
+        }
+        
+        100% {
+          transform: translate(0, 500px);
+        }            
+      }
+
+      div {
+          width: 100px;
+          height: 100px;
+          background-color: rosybrown;
+          animation: 돌아와돌아와돌아와 6s alternate infinite; 
+        } */
+        /* alternate는 순방향 시작, 순방향-역방향 번갈아 재생 */
+    </style>
+</head>
+<body>
+    <div>hello</div>
+</body>
+</html>

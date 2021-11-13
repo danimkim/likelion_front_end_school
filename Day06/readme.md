@@ -1,144 +1,64 @@
-## 2021-11-08 TIL
+## 2021.11.05 TIL
 
+### 1. inline 요소의 한계점
+margin-top, margin-bottom 을 줄 수 없고 height, width를 줄 수 없다.
 
-### 1. align-items, align-content
-- 요소를 `cross-axis` 기준으로 이동시킨다
-- `align-items`는 `flex-container`에 주는 값이다
-- `align-items: stretch`가 기본값으로 컨테이너의 자식 요소의 `height` 값이 설정되어 있지 않을때 `cross-axis` 방향으로 컨테이너 영역 만큼 자식 요소의 영역을 쭉 늘려준다<br>
+### 2. inline-block 값을 준 div가 여러 개 있을 때 div 사이에 공백이 생기는 이유
+- html에서 줄바꿈은 공백으로 인식된다
+```
+<!-- 줄바꿈을 하면 div 사이에 공백이 생긴다  -->
+<div>안녕하세요</div>
+<div>안녕하세요</div>
+<div>안녕하세요</div>
+```
+![html줄바꿈공백예제](https://user-images.githubusercontent.com/74545780/140526281-78d566f7-4482-46a3-9b5b-6ed3de95237e.png)
 
-| <img src="https://user-images.githubusercontent.com/74545780/140778243-2704cf60-2ed4-4fd5-ae5f-008c484feb15.png" height="500"> | 
+#### 공백 없애는 방법
+- 줄바꿈 없이 요소들을 붙여서 쓰면 공백이 없어진다 (하지만 가독성이 떨어지므로 이렇게 쓰지 않도록 한다)
+```
+<div>안녕하세요</div><div>안녕하세요</div><div>안녕하세요</div>
+```
+![html줄바꿈공백없애는예제](https://user-images.githubusercontent.com/74545780/140526501-910e17d7-f751-4151-a390-f7bd4cc4ab92.png)
+
+- 부모요소에 font-size:0 을 준다. 다른 요소의 자식으로 있지 않다면 부모요소는 body가 되는데 body에 font-size:0을 주면 공백이 없어짐
+
+### 3. float
+| ![float 예시](https://user-images.githubusercontent.com/74545780/140518555-d604b85b-9b74-4a55-a79a-aa4d0410343d.png) | 
 |:--:| 
-| align-items: stretch |
+| float 예시 |
+- `float` 속성은 텍스트의 흐름이 이미지 주변으로 흐르는 듯한 레이아웃을 구현하기 위해 만들어졌다
 
-### 2. align-self
-- 부모 요소의 align-items 속성을 덮어씌워서 특정 요소에 개별적으로 align-items 속성을 부여한다
+#### block 요소에 float 설정했을 때
+| ![float 설정하기 전](https://user-images.githubusercontent.com/74545780/140524199-6ce0e48c-1be5-48a8-98db-63592fa97eb9.png) | ![float을 주었을때](https://user-images.githubusercontent.com/74545780/140524397-39820a4d-fe6d-4ac8-8eb2-ecea35836e6a.png)|
+|:--:|:--:| 
+| float 설정하기 전 |float을 주었을때|
+- block 요소는 기본적으로 뷰포트의 가로폭 전체 넓이를 차지하는데 float 값을 주면 해당 요소에 해당하는 공간만큼만 차지하게 된다
+- `float`을 따로 설정하지 않은 상태에서 html 요소들은 normal flow에 있다
+- 요소에 `float`을 설정하면 부모 요소가 해당 요소를 인식하지 못한다
+- normal flow에 있는 요소들은 `float`된 요소와 `position:absolute` 값이 설정된 요소들을 인식하지 못한다
+- normal flow에 있는 요소들을 인식하면서 특정 요소를 이동시키고 싶다면 `position:relative`를 쓰면 된다
 
-### 3. flex-wrap
-- `flex-item` 요소들을 감싸주는 역할을 하는 속성으로 강제로 한줄에 배치시키거나 가능한 영역 내에서 벗어나지 않고 여러행으로 나누어 표현하게 해준다
-- 컨테이너 너비가 
+#### 자식 요소가 float일 때 컨테이너 역할을 하는 부모 요소에게 생기는 문제점 해결 방법
+1. clear 속성주기 : 요소의 앞에 있는 형제요소의 `float`을 해제시켜준다
+2. 부모 요소에 `overflow:hidden` 주기
+3. clear-fix 방법 : 가상 요소 클래스 `::after` 사용하기
 
-#### flex-container에 `flex-wrap: wrap` 값을 주었을 때 align-items와 align-content
-- `align-items`는 flex-items가 컨테이너 너비보다 커서 다음 행으로 넘어가는 경우, 요소들 간의 줄간격을 유지하면서 cross-axis 축으로 이동시킨다
-
-```css
-.container {
-  display: flex;
-  height: 100vh;
-  flex-wrap: wrap;
-  align-items: center;
-}
-li{
-  width: 100px;
-  height: 100px;
-  background-color: salmon;
-  border: solid 1px black;
-}
+### 5.`img` 태그의 alt 속성
 ```
-```html
-<body>
-    <ul class="container">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-    </ul>
-</body>
+<img src="./image.png" alt="">
 ```
-| <img src="https://user-images.githubusercontent.com/74545780/140784166-a9cac84f-4b4a-4ed0-a0e2-1135b934eef3.png" height="500"> | <img src="https://user-images.githubusercontent.com/74545780/140780908-890efd7a-fd1a-456b-9c0f-2ed5014dfd87.png" height="500"> | <img src="https://user-images.githubusercontent.com/74545780/140784176-e89b069d-49ea-481f-a4f5-2cab2d76f41d.png" height="500"> | 
-|:--:|:--:|:--:|
-| align-items: flex-start | align-items: center | align-items: flex-end |
+이미지 설명이 필요 없는 경우라도 alt 속성 자체를 없애지 않고 그냥 빈값으로라도 속성을 둬야한다.
+스크린 리더가 html 문서를 읽을 때 img 태그에 alt 속성이 있으면 그 속성값을 읽지만 아예 없으면 src 속성값(이미지파일의 주소)을 읽어버린다.
+이를 방지하기 위해 이미지 설명이 필요 없더라도 alt 속성을 꼭 적어주어야한다.
+<br><br>
+<hr>
 
-- `align-content`는 요소들간의 줄간격 없이 이동시킨다
-```css
-.container {
-  display: flex;
-  height: 100vh;
-  flex-wrap: wrap;
-  align-content: center;
-}
-li{
-  width: 100px;
-  height: 100px;
-  background-color: salmon;
-  border: solid 1px black;
-}
-```
-| <img src="https://user-images.githubusercontent.com/74545780/140781972-6a29118d-24c6-4ae9-b7da-03034c73a254.png" height="500"> | 
-|:--:| 
-| align-content: center |
+#### 예제 결과 확인하기
+- [063_div_inline_block_속성_부연설명.html](https://dahhnym.github.io/likelion_front_end_school/Day05/063_div_inline_block_%EC%86%8D%EC%84%B1_%EB%B6%80%EC%97%B0%EC%84%A4%EB%AA%85.html)
+- [065_sticky.html](https://dahhnym.github.io/likelion_front_end_school/Day05/065_sticky.html)
 
 
-### 4. flex-basis
-- flex-basis는 자식요소에 사용한다.
-- main axis 방향에 요소의 넓이값을 특정한다 main axis가 row라면 x축 방향으로 넓이가 적용되고 column이라면 y축방향로 넓이가 적용된다
-- flex-basis가 적용되어 있으면 width, height 값이 무시된다
-- flex-basis 보다 크려면 flex-grow, 작게 하려면 flex-shrink
-- 음수값은 없고 기본값이 1이다 0을 사용할 경우 컨테이너의 크기가 줄어도 값은 고정된다
-```css
-.container{
-  display: flex;
-}
-.item{
-  width: 100px;
-  height: 100px;
-  flex-basis: 100px;
-  background-color: tomato;
-  border: solid 1px black;
-  flex-grow: 1;
-}
-```
-```html
-<div class="container">
-  <div class="item">Lorem, ipsum dolor.</div>
-  <div class="item second">Lorem ipsum dolor sit amet.</div>
-  <div class="item">lorem ipsum</div>
-</div>
-```
+  
+    
 
-| <img src="https://user-images.githubusercontent.com/74545780/140790833-cd29b22c-8d3a-4102-bf2a-853c8dddfa49.png"> | 
-|:--:| 
-| 모든 flex-item에 flex-grow: 1 값을 주었을 때 | 
-
-```css
-.item{
-  width: 100px;
-  height: 100px;
-  flex-basis: 100px;
-  background-color: tomato;
-  border: solid 1px black;
-  flex-grow: 1;
-}
-.second{
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-```
-| <img src="https://user-images.githubusercontent.com/74545780/140788910-9472ab71-203e-4256-8660-e457494ad039.png"> | 
-|:--:| 
-| .second 클래스를 가진 flex-item에만 flex-grow:0 flex-shrink:0 을 주었을 때 |
-
-### 5. grid
-- grid는 container 영역을 꽉 채우려는 특성이 있다
-
-
-#### grid 속성 선언 방식(1)
-```css
-.container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-```
-#### grid 속성 선언 방식(2)
-```css
-.container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-```
-
+  
