@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my website</title>
+    <link rel="stylesheet" href="../../fontawesome/css/all.css">
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+      body {
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      header{
+        width: 100%;
+        height: 60px;
+        background-color: #FAEAFC;
+      }
+      nav{
+        padding: 20px;
+      }
+      .menu{
+        display: flex;
+      }
+
+      .logo{
+        margin-right: auto;
+      }
+      .icon{
+        display:none;
+      }
+      .menu a {
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-left: 50px;
+      }
+      .section-wrap{
+        display: flex;
+      }
+      section {
+        width: 85%;
+        height: 100%;
+        /* border: solid 1px sandybrown; */
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* border: solid 1px rgb(168, 164, 164); */
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+      }
+
+      .item{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: #fff;
+        border: solid 2px rgb(168, 164, 164);
+        border-radius: 10px;
+        margin: 5px;
+        padding: 10px;
+      }
+
+      .item img {
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      aside{
+        width: 20%;
+        background-color: aquamarine;
+        border:solid 1px red;
+      }
+      footer{
+        box-sizing: border-box;
+        width: 100%;
+        height: 130px;
+        background-color: #E5E7E9;
+        text-align: center;
+        padding-top: 50px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+      }
+
+      @media screen and (max-width:1330px){
+        .item {
+          width: 33%;
+        }
+        .icon{
+          display: block;
+        }
+        .icon a {
+          font-size: 25px;
+        }
+        .menu-item{
+          display:none;
+        }
+        aside{
+          display:none;
+          width: 0;
+        }
+      }
+    @media screen and (max-width:1000px){
+      .item {
+        width: 100%;
+      }
+      .icon{
+        display: block;
+      }
+      .menu-item{
+        display:none;
+      }
+      aside{
+        display:none;
+        width: 0;
+      }
+    }
+    </style>
+</head>
+<body>
+  <main>
+    <header>
+      <nav>
+        <ul class="menu">
+          <li class="logo">
+            <a href="#">LOGO</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">ABOUT</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">SKILLS</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">PORTFOLIO</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">CONTACT</a>
+          </li>
+          <li class="icon">
+            <a href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="section-wrap">
+      <section>
+        <ul class="container">
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus quos mollitia quae est dolores exercitationem eveniet velit? Laudantium nulla harum possimus delectus quos amet beatae alias nisi eligendi! Hic.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus quos mollitia quae est dolores exercitationem eveniet velit? Laudantium nulla harum possimus delectus quos amet beatae alias nisi eligendi! Hic.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus quos mollitia quae est dolores exercitationem eveniet velit? Laudantium nulla harum possimus delectus quos amet beatae alias nisi eligendi! Hic.</p>
+          </li>
+          <li class="item">
+            <img src="../../a.jpg" alt="창가에서 노트북 하고 있는 여자" class="item-img">
+            <p class="item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis mollitia molestiae perferendis dicta, quas necessitatibus aliquid dolore deserunt asperiores expedita corporis natus nemo doloremque laborum in provident possimus atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente temporibus quos mollitia quae est dolores exercitationem eveniet velit? Laudantium nulla harum possimus delectus quos amet beatae alias nisi eligendi! Hic.</p>
+          </li>
+        </ul>
+      </section>
+      <aside>
+        <ul>
+          <li>Category1</li>
+          <li>Category2</li>
+          <li>Category3</li>
+          <li>Category4</li>
+          <li>Category5</li>
+          <li>Category6</li>
+          <li>Category7</li>
+          <li>Category8</li>
+        </ul>
+      </aside>
+    </div>
+    <footer>
+      Made by @dahhnym. &copy; 2021. Tina. All rights reserved.
+    </footer>
+  </main>
+    
+</body>
+</html>
