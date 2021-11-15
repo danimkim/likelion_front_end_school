@@ -177,19 +177,19 @@ h1 {
 }
 
 .sign-in-google span::before { 
-  background-image: url(images/Google__G__Logo\ 1.png);
+  background-image: url(../images/Google__G__Logo\ 1.png);
   margin-right: 141px; 
 }
 .sign-in-facebook span::before {
-  background-image: url(images/facebook.png); 
+  background-image: url(../images/facebook.png); 
   margin-right: 131px; 
 }
 .sign-in-naver span::before{ 
-  background-image: url(images/naver-logo.png);
+  background-image: url(../images/naver-logo.png);
   margin-right: 134px; 
 }
 .sign-in-kakao span::before { 
-  background-image: url(images/message-circle.png);
+  background-image: url(../images/message-circle.png);
   margin-right: 126px; 
 }
 
