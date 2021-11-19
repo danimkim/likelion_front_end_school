@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../reset.css">
+	<style>
+		body {
+			font-family: 'Courier New', Courier, monospace;
+			background-color: rgb(218, 218, 253);
+		}
+
+		/* 직접 셀렉트 박스 만들기 */
+		#app {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		h2 {
+			margin: 30px;
+			font-weight: 700;
+		}
+
+		.btn-select {
+			width: 200px;
+			height: 40px;
+			color: #000;
+			background: #FFFFFF;
+			border: 1px solid #C4C4C4;
+			box-sizing: border-box;
+			border-radius: 10px;
+		}
+
+		.cont-list {
+			display: none;
+			height: 210px;
+			margin-top: 9px;
+			overflow: hidden;
+			border-radius: 10px;
+			background: #FFFFFF;
+			border: 1px solid #C4C4C4;
+			box-sizing: border-box;
+			box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+		}
+
+		.list-member {
+			width: 200px;
+			height: 30px;
+			background: #FFFFFF;
+		}
+
+		.cont-list.on {
+			display: block;
+		}
+
+		.btn-select:active {
+			background: #FFFFFF;
+			border: 1px solid #9B51E0;
+			box-sizing: border-box;
+			border-radius: 10px;
+			outline: 3px solid #F8E4FF;
+			border-radius: 10px;
+		}
+
+		.btn-select:active+.cont-list {
+			display: block;
+		}
+
+		.list-member li {
+			height: 30px;
+			width: 200px;
+			box-sizing: border-box;
+			border-radius: 10px;
+		}
+
+		.list-member li button {
+			display: block;
+			height: 100%;
+			width: 100%;
+			background-color: #fff;
+			border: none;
+		}
+
+		.list-member li button:hover {
+			background: #F8E4FF;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="app">
+		<h2>What is your favorite city?</h2>
+		<button class="btn-select">Choose your favorite city</button>
+		<div class="cont-list">
+			<ul class="list-member">
+				<li><button type="button">Paris</button></li>
+				<li><button type="button">Tokyo</button></li>
+				<li><button type="button">Seoul</button></li>
+				<li><button type="button">Bangkok</button></li>
+				<li><button type="button">Berlin</button></li>
+				<li><button type="button">Madrid</button></li>
+				<li><button type="button">Moscow</button></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		const btn = document.querySelector('.btn-select');
+		const list = document.querySelector('.cont-list');
+		btn.addEventListener('click', () => {
+			list.classList.toggle('on');
+		});
+		list.addEventListener('click', (event) => {
+			if (event.target.nodeName === "BUTTON") {
+				btn.innerText = event.target.innerText;
+				list.classList.remove('on');
+			}
+		});
+	</script>
+</body>
+
+</html>
