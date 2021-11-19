@@ -34,6 +34,26 @@
 			border: 1px solid #C4C4C4;
 			box-sizing: border-box;
 			border-radius: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 12px 15px 12px 14px;
+		}
+
+		.btn-select::after {
+			display: inline-block;
+			content: '';
+			background: center / contain no-repeat url(img/arrow-down.png);
+			width: 12px;
+			height: 8px;
+		}
+		
+		.btn-select.on::after{
+			display: inline-block;
+			content: '';
+			background: center / contain no-repeat url(img/arrow-up.png);
+			width: 12px;
+			height: 8px;
 		}
 
 		.cont-list {
@@ -59,7 +79,7 @@
 			display: block;
 		}
 
-		.btn-select:active {
+		.btn-select.on {
 			background: #FFFFFF;
 			border: 1px solid #9B51E0;
 			box-sizing: border-box;
@@ -97,7 +117,7 @@
 <body>
 	<div id="app">
 		<h2>What is your favorite city?</h2>
-		<button class="btn-select">Choose your favorite city</button>
+		<button class="btn-select"><span>Choose your favorite city</span></button>
 		<div class="cont-list">
 			<ul class="list-member">
 				<li><button type="button">Paris</button></li>
@@ -114,15 +134,22 @@
 		const btn = document.querySelector('.btn-select');
 		const list = document.querySelector('.cont-list');
 		btn.addEventListener('click', () => {
+			if(btn.classList.contains('selected')){
+				btn.style.outline = "none";
+			}
+			btn.classList.toggle('on');
 			list.classList.toggle('on');
 		});
 		list.addEventListener('click', (event) => {
 			if (event.target.nodeName === "BUTTON") {
 				btn.innerText = event.target.innerText;
+				btn.style.backgroundColor  = "#F8E4FF";
+				btn.style.border = "none";
+				btn.classList.add('selected');
+				btn.classList.remove('on');
 				list.classList.remove('on');
 			}
 		});
 	</script>
 </body>
-
 </html>
