@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="app h-full mx-96 font-serif">
+    <h1 class="sr-only">Resume</h1>
+    <header class="grid grid-cols-3">
+      <h2 class="sr-only">프로필 사진 및 이름</h2>
+      <div class="col-span-1 bg-gray-700">
+        <img
+          src="https://media-exp1.licdn.com/dms/image/C5603AQEwip6T1daQZw/profile-displayphoto-shrink_200_200/0/1629898970036?e=1643241600&v=beta&t=9wyYMkV63rs_E1yuDR7J6x5nqaLlIZUmYI3eEwdHKns"
+          alt="프로필 사진" class="rounded-full w-56 self-center m-auto my-16 border-4 border-double">
+      </div>
+      <div class="col-span-2 bg-red-50 flex justify-center flex-col pl-10">
+        <h2 class="sr-only">이름 및 깃헙 주소</h2>
+        <p class="text-5xl pb-3">Danim Kim</p>
+        <p class="text-xl pl-1">Front-end Developer</p>
+      </div>
+      <section class="col-span-3 w-full h-24 flex justify-center items-center bg-yellow-500">
+        <h2 class="sr-only">Contact</h2>
+        <dl class="flex space-x-3 ">
+          <dt><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 box-border border-2 border-gray-900 text-gray-900" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+          </svg></dt>
+          <dd>010-1234-5678</dd>
+          <dt class="pl-10">       
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 border-2 border-gray-900 text-gray-900" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+        </dt>
+          <dd>kdn725@gmail.com</dd>
+          <dt class="pl-10"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="text-gray-500"><path d="M0 0v24h24v-24h-24zm14.534 19.59c-.406.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.311-1.588-.824-2.147.083-.202.357-1.016-.079-2.117 0 0-.671-.215-2.198.82-.639-.18-1.323-.267-2.003-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"/></svg></dt>
+          <dd><a href="https://github.com/dahhnym">https://github.com/dahhnym</a></dd>
+        </dl>
+      </section>
+    </header>
+    <div class="grid grid-cols-3">
+      <section class="bg-gray-700 text-gray-200 p-8 col-span-1">
+        <h2 class="sr-only">학력, 스킬, 깃헙 내역</h2>
+        <article class="mb-8">
+          <h3 class="text-xl border-t-8 w-10 text-yellow-600 font-semibold">Education</h3>
+          <ul>
+            <li>2021.11 - 2022.01</li>
+            <li>멋쟁이사자처럼 프론트엔드스쿨</li>
+            <li></li>
+          </ul>
+          <ul>
+            <li>2021.01 - 2021.07</li>
+            <li>OO교육센터 자바기반 풀스택교육과정</li>
+            <li></li>
+          </ul>
+        </article>
+        <article class="mb-8">
+          <h3 class="text-xl border-t-8 w-10 text-yellow-600 font-semibold">Skills</h3>
+          <p class="sr-only">기술스택</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SASS</li>
+            <li>Javascript</li>
+            <li>React</li>
+            <li>Node.js</li>
+          </ul>
+        </article>
+        <article>
+          <div class="border-t-8 w-10"></div>
+          <h3 class="text-xl text-yellow-600 font-semibold ">Github Stat</h3>
+          <p class="sr-only">깃헙 내역</p>
+          <p>Total Commit: 60</p>
+          <p>Language</p>
+          <div class="relative pt-1">
+            <div class="overflow-hidden h-3 mb-2 text-xs flex rounded">
+              <div
+                style="width: 30%"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-red-500
+                "
+              ></div>
+              <div
+                style="width: 30%"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-blue-500
+                "
+              ></div>
+              <div
+                style="width: 40%"
+                class="
+                  shadow-none
+                  flex flex-col
+                  text-center
+                  whitespace-nowrap
+                  text-white
+                  justify-center
+                  bg-yellow-500
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="flex justify-between mx-3 text-sm">
+            <ul class="list-disc text-red-500">
+              <li><span class="text-gray-300">HTML 30%</span></li>
+            </ul>
+            <ul class="list-disc text-blue-500">
+              <li><span class="text-gray-300">CSS 30%</span></li>
+            </ul>
+            <ul class="list-disc text-yellow-500">
+              <li><span class="text-gray-300">Javascript 40%</span></li>
+            </ul>
+          </div>
+          
+        </article>
+      </section>
+      <section class="bg-red-50 col-span-2 p-8">
+        <h2 class="sr-only">자기소개, 프로젝트 내역</h2>
+        <article>
+          <h3 class="text-2xl border-t-8 w-10 font-bold text-gray-700 border-gray-700">Profile</h3>
+          <section class="mt-3">
+            <h4 class="sr-only">자기소개</h4>
+            <p>고민하고 개선하는 과정을 즐기는 개발자입니다. 문제의 핵심을 파악하려고 노력합니다. 
+            익숙함에 안주하는 것보다 새로운 것을 배우고 시도하여 꾸준한 성장을 추구합니다. 
+            </p>
+          </section>
+        </article>
+        <article>
+          <h3 class="text-2xl mt-5 border-t-8 w-10 font-bold text-gray-700 border-gray-700">Project</h3>
+          <section class="mt-3">
+            <h4 class="text-lg font-bold">1만 시간의 법칙</h4>
+            <p class="text-lg">2021.11-2021.12</p>
+            <p>Used Skill : <span class="text-blue-500">HTML, CSS, Javascript</span></p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore molestias beatae, nulla aperiam molestiae eligendi consequuntur quam labore dolorem officiis temporibus! Expedita officia sunt at nemo consequatur eaque ipsam consequuntur?</p>
+          </section>
+          <section class="mt-3">
+            <h4 class="text-lg font-bold">벤딩머신</h4>
+            <p class="text-lg">2021.11-2021.12</p>
+            <p>Used Skill : <span class="text-blue-500">HTML, CSS, Javascript</span></p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore molestias beatae, nulla aperiam molestiae eligendi consequuntur quam labore dolorem officiis temporibus! Expedita officia sunt at nemo consequatur eaque ipsam consequuntur?</p>
+          </section>
+          <section class="mt-3">
+            <h4 class="text-lg font-bold">렌딩페이지</h4>
+            <p class="text-lg">2021.11-2021.12</p>
+            <p>Used Skill : <span class="text-blue-500">HTML, CSS, Javascript</span></p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore molestias beatae, nulla aperiam molestiae eligendi consequuntur quam labore dolorem officiis temporibus! Expedita officia sunt at nemo consequatur eaque ipsam consequuntur?</p>
+          </section>
+          <section class="mt-3">
+            <h4 class="text-lg font-bold">감귤마켓</h4>
+            <p class="text-lg">2021.11-2021.12</p>
+            <p>Used Skill : <span class="text-blue-500">HTML, CSS, Javascript</span></p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore molestias beatae, nulla aperiam molestiae eligendi consequuntur quam labore dolorem officiis temporibus! Expedita officia sunt at nemo consequatur eaque ipsam consequuntur?</p>
+          </section>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+
+</html>
