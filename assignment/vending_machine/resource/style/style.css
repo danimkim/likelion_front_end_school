@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* reset */
+.img-item {
+  display: block;
+}
+
+/* util */
+/* ir은 img-replace */
+.ir {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
+}
+
+body {
+  background-color: #EAE8FE;
+}
+
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 0 28px;
+  padding-top: 247px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#app .vending-machine, #app .my-info {
+  width: 360px;
+  background-color: #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style_2.css.map */

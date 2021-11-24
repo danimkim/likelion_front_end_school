@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* reset */
+.img-item {
+  display: block;
+}
+
+/* util */
+/* ir은 img-replace */
+.ir {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
+}
+
+body {
+  background-color: #EAE8FE;
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0 28px;
+  padding-top: 247px;
+  font-family: 'Noto Sans KR', sans-serif;
+  .vending-machine, .my-info {
+    width: 360px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+  }
+}
+
+
