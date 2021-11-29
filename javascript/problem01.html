@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem 01</title>
+  <script>
+    // 문제출처: https://codingdojang.com/scode/408?answer_mode=hide
+    // 1차원의 점들이 주어졌을 때, 그 중 가장 거리가 짧은 것의 쌍을 출력하는 함수를 작성하시오. (단 점들의 배열은 모두 정렬되어있다고 가정한다.)
+    // 예를들어 S={1, 3, 4, 8, 13, 17, 20} 이 주어졌다면, 결과값은 (3, 4)가 될 것이다.
+    let value = [1, 3, 4, 8, 13, 17, 20, 21, 28];
+    let temp = value[1] - value[0]
+    let result = 0
+
+    for (let i = 0; i < value.length - 1; i++) {
+      if (temp > (value[i + 1] - value[i])) {
+        result = value[i + 1] - value[i];
+      }
+    }
+
+    console.log(value[result], value[result + 1]);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
