@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정 문자열 갯수 표시하기</title>
+    <style>
+        span { color:Red;}
+    </style>
+</head>
+<body>
+    <script> 
+        let text = 'Hello World This is JavaScript';
+        let count = 0;
+
+        for(let i=0; i<text.length; i++){
+          if(text[i] == 'a'){
+            count++;
+          }
+        }
+
+        document.write(`"${text}" 문장에 <span>a</span>는 ${count}번 들어있습니다`);
+        // "Hello World This is JavaScript" 문장에 a는 2번 들어있습니다
+    </script>
+</body>
+</html>
