@@ -1,7 +1,5 @@
-# likelion_front_end_school
-
-### [📝 TIL 및 과제 아카이브](https://dahhnym.github.io/likelion_front_end_school/)
-
+# 📝 TIL 및 과제 아카이브
+### 실습 과제
 <ul>
 <li>
   <a href="https://dahhnym.github.io/likelion_front_end_school/Day03/%EA%B3%BC%EC%A0%9C_002.html" target="_blank">웹사이트 마크업 클론</a>
@@ -37,7 +35,8 @@
   <a href="https://dahhnym.github.io/likelion_front_end_school/assignment/resume/resume.html" target="_blank">2021 Resume Made With Tailwind CSS</a>
 </li>    
 </ul>
-<span>TIL</span>
+
+### TIL
 <ul>
     <li>
       <a href="https://github.com/dahhnym/likelion_front_end_school/blob/main/Day06/readme.md" target="_blank">2021-11-05 TIL</a>
@@ -62,7 +61,8 @@
     </li>
   
 </ul>
-<span>공부한 것</span>
+
+### 예제코드 설명
 <ul>
   <li>
       <a href="https://github.com/dahhnym/likelion_front_end_school/blob/main/javascript/function_param_arg.js" target="_blank">매개변수(parameter)와 인자(argument)의 이해를 돕기 위한 함수 동작 설명</a>
