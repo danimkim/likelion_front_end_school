@@ -59,7 +59,9 @@
     <li>
       <a href="https://github.com/dahhnym/likelion_front_end_school/blob/main/javascript/2021-12-02-TIL.md" target="_blank">2021-12-02 TIL</a>
     </li>
-  
+    <li>
+      <a href="https://github.com/dahhnym/likelion_front_end_school/blob/main/javascript/2021-12-03-TIL.md" target="_blank">2021-12-03 TIL</a>
+    </li>
 </ul>
 
 ### 예제코드 설명
