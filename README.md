@@ -73,3 +73,6 @@
       <a href="https://github.com/dahhnym/likelion_front_end_school/blob/main/javascript/map_method.md" target="_blank">2차원 배열에서의 map() 메소드 사용 예제 설명</a>
     </li>
 </ul>
+
+### 자바스크립트로 구현한 간단한 프로그램
+- [트리 출력하기](https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/010.html)
