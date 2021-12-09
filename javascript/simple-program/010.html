@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트리 만들기</title>
+    <script>
+        // 사용자에게 숫자 입력 받기
+        let flag = false;
+        let input;
+        let userInput = prompt('숫자를 입력하세요');
+        do {
+            input = parseInt(userInput);
+            if(userInput){
+                if (input < 1 || isNaN(input)) {
+                    userInput = prompt('1 이상의 숫자만 입력하세요');
+                } else {
+                    flag = true;
+                }
+            } else {
+                alert('프로그램을 종료합니다');
+                flag = true;
+            }
+        } while (!flag)
+
+        // 입력받은 값으로 트리 만들기
+        let n = 0;
+        let result = '';
+        for (let i = 1; i <=input; i++) { // 라인 수
+            for (let j = input; j > i; j--) { // 공백 수
+                result += '&nbsp';
+            }
+            if (i === 1) {
+                result += '*' + '<br>';
+            } else {
+                for (let k = 0; k < i + n + 1; k++) {
+                    result += '*';
+                }
+                result += '<br>';
+                n++;
+            }
+        }
+        document.write(result);
+    </script>
+</head>
+<body>
+</body>
+</html>
