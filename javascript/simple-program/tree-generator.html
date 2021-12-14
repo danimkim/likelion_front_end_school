@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트리 만들기</title>
+    <style>
+        .starWrap {
+            border:1px solid #d8d8d8;
+            border-radius:10px;
+            padding:20px;
+            margin:50px auto;
+            max-width:90%;
+            background-color:#f3f3f3;
+        }
+     
+        .starWrap input, .starWrap button {
+            background:#8a8be9;
+            border:none;
+            color:rgba(255,255,255,0.7);
+            height:40px;
+            border-radius:3px; 
+            padding:0 10px;
+            vertical-align:top;
+        }
+
+        .starWrap .input_number {
+            text-align:center;
+        }
+        .starWrap button { 
+            cursor:pointer;
+            background:#333;
+            transition:all 0.4s;
+        }
+
+        .starWrap button:hover {
+            opacity:0.7;
+        }
+
+        .starWrap input:focus {
+            background:#6566b8;
+        }
+
+        .starWrap input::placeholder {
+            color:inherit;
+        }
+
+        .starWrap .star {
+            margin:50px auto 0; 
+        }
+
+        .starWrap .count {
+            color:dodgerblue;
+        }
+
+        .txt-hide{
+            display: none;
+        }
+
+        .txt-error{
+            font-size: 12px;
+            margin: 5px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="starWrap">
+        <div class="input_number">
+            <input type="text" class="num" placeholder="숫자를 입력하세요">
+            <button type="button" class="btnGo">입력완료</button>
+            <p class="txt-error"></p>
+        </div>
+        <div class="star">
+            <h1>입력하신 <span class="count">?</span>행의 별이 출력됩니다.</h1>
+            <div class="tree">
+    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let star = document.querySelector('.starWrap');
+        let btnGo = star.querySelector('.btnGo');
+        let num = star.querySelector('.num');
+        let tree = star.querySelector('.tree');
+        let count = star.querySelector('.count');
+        const txtError = star.querySelector('.txt-error');
+        let nowNum;
+        
+        txtError.classList.add('txt-hide');
+  
+
+        btnGo.addEventListener('click', function() {
+            nowNum = num.value;
+            if(isNaN(parseInt(nowNum)) || nowNum == ''){
+                txtError.innerHTML = '1 이상의 숫자를 입력해주세요.';
+                txtError.classList.remove('txt-hide');
+            } else {
+                count.innerHTML = nowNum;
+                txtError.classList.add('txt-hide');
+            }
+
+            checkStars(nowNum); 
+        }) 
+
+        function checkStars(number) {
+            let n = 0;
+            let result = '';
+            for (let i = 1; i <= number; i++) { // 라인 수
+                for (let j = number ; j > i; j--) { // 공백 수
+                    result += '&nbsp;';
+                }
+                if (i === 1) {
+                    result += '*' + '<br>';
+                } else {
+                    for (let k = 0; k < i + n + 1; k++) {
+                        result += '*';
+                    }
+                    result += '<br>';
+                    n++;
+                }
+            } 
+            tree.innerHTML = result;
+        } 
+
+
+    </script>
+</body>
+</html>
