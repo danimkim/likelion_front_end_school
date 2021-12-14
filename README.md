@@ -75,4 +75,5 @@
 </ul>
 
 ### 자바스크립트로 구현한 간단한 프로그램
-- [트리 출력하기](https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/010.html)
+- [트리 출력하기](https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/tree-generator.html)
+- [텍스트 박스(출력 및 리셋)](https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/text-box.html)
