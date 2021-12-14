@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 박스</title>
+    <style>
+        /* reset */
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        body{ font-family:Arial, Helvetica, sans-serif; }
+
+        .hide { display: none; }
+
+        .wrapper {
+            margin: 15px;
+            width: 350px;
+        }
+
+        .form{ width: 350px; }
+        .form .txt-inp {
+            box-sizing: borer-box;
+            width: 250px;
+            height: 30px;
+            font-size: 15px;
+        }
+        .form .txt-inp:focus{
+            background-color: tomato;
+            color: #fff;
+            transition: .2s;
+        }
+        .form .btn-reset{
+            box-sizing: border-box;
+            height: 36px;
+            padding: 0 10px;
+            font-size: 14px;
+            vertical-align: top;
+            background-color: tomato;
+            color: #fff;
+            border: solid 1px darkslategrey;
+        }
+        .form .btn-reset:hover { cursor: pointer; }
+
+        .txt-display{ font-size: 18px; }        
+        
+        .inp-display{ color: tomato; }
+
+        .txt-reset {
+            font-size: 18px;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form class="form">
+            <input class="txt-inp" type="text" placeholder="Enter Here">
+            <input type="reset" value="Reset" class="btn-reset">
+        </form>
+        <p class="txt-display">You said <span class="inp-display">nothing</span>, right?</p>
+        <p class="txt-reset">You deleted!</p>
+    </div>
+    <script>
+        const form = document.querySelector('.form');
+        const txtInp = document.querySelector('.txt-inp');
+        const resetBtn = document.querySelector('.btn-reset');
+        const txtDisplay = document.querySelector('.txt-display');
+        const inpDisplay = document.querySelector('.inp-display');
+        const txtReset = document.querySelector('.txt-reset');
+        txtReset.classList.add('hide');
+
+        txtInp.addEventListener('keydown',(e) => {
+            txtDisplay.classList.remove('hide');
+            txtReset.classList.add('hide');
+            inpDisplay.innerHTML = '"'+txtInp.value+'"';
+            if(txtInp.value == ''){
+                inpDisplay.innerHTML = 'nothing';
+            }
+        });
+
+        form.addEventListener('submit',reset);
+        resetBtn.addEventListener('click', reset);
+
+
+        function reset(e){
+            e.preventDefault();
+            txtDisplay.classList.add('hide');
+            txtReset.classList.remove('hide');
+            txtInp.value = '';
+        }
+
+    </script>
+</body>
+</html>
