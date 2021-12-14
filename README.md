@@ -75,5 +75,24 @@
 </ul>
 
 ### 자바스크립트로 구현한 간단한 프로그램
-- [트리 출력하기](https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/tree-generator.html)
-- [텍스트 박스(출력 및 리셋)](https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/text-box.html)
+<details>
+<summary>트리 출력하기</summary>
+  <ul>
+    <li><a href="https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/tree-generator.html"><b>Demo</b></a></li>
+    <li>input 창에 숫자 입력 후 버튼 클릭 하면 입력한 값만큼의 라인으로 이루어진 트리 출력</li>
+    <li>예외 처리
+      <ul>
+        <li>숫자 이외의 값, 1 미만의 값, 값을 입력하지 않은 경우 error 메세지 출력</li>
+      </ul>
+    </li>
+  </ul>
+</details>
+
+<details>
+<summary>텍스트 박스(출력 및 리셋)</summary>
+  <ul>
+    <li><a href="https://dahhnym.github.io/likelion_front_end_school/javascript/simple-program/text-box.html"><b>Demo</b></a></li>
+    <li>input 창에 텍스트 입력 시 하단에 입력값 동시에 출력</li>
+    <li>enter키 누를 시 혹은 버튼 클릭시 reset</li>
+  </ul>
+</details>
